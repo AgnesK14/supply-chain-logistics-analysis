@@ -309,3 +309,19 @@ supply-chain-logistics-analysis/
 │
 └── documentation/
     └── power-query-steps.md
+```
+# Limitations
+
+Beberapa keterbatasan penting dalam analisis ini:
+
+1. **1.370 orders tidak memiliki matching freight rate**, sehingga freight cost untuk order tersebut tidak dapat dihitung.
+
+2. Total operational cost yang ditampilkan merupakan **calculated cost berdasarkan available freight rate data**, bukan actual total cost seluruh network.
+
+3. Order-to-Capacity Ratio merupakan perbandingan historical order volume dengan stated daily capacity, bukan actual warehouse utilization.
+
+4. Dataset hanya memberikan historical orders pada periode yang tersedia, sehingga hasil analisis tidak dapat digunakan untuk menyimpulkan long-term operational performance.
+
+5. Project ini tidak melakukan validasi apakah redistribusi order antar-plant dapat dilakukan secara operasional.
+
+6. Network optimization menggunakan Linear Programming tidak termasuk dalam scope project ini.
